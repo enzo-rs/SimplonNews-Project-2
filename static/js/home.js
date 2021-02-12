@@ -1,5 +1,4 @@
 let key = sessionStorage.getItem('token');
-console.log(key);
 
 
 
@@ -28,10 +27,11 @@ function getArticle(key) {
             } else {
                 response.json()
                     .then(function (articles) {
-                        console.log(articles.articles);
                         let news = articles.articles;
                         let actu = new ArticlesObjet(news);
                         actu.createHTMLStruct();
+
+                        redirectionCategories(actu)
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -61,6 +61,30 @@ class ArticlesObjet {
         }
         redirection();
     }
+
+
+    createHTMLStructCategory(linkName) {
+        let cible = document.querySelectorAll('div.art');
+        let str = "";
+        let count = 0;
+
+        for (let i = 0; i < cible.length; i++) {
+            cible[i].innerHTML = str;
+        }
+
+        for (let i = 0; count < cible.length; i++) {
+            console.log(this.product[i].Category.name + '§§');
+            if (this.product[i].Category.name == linkName) {
+                console.log('ok');
+                str = `<div data-key ="${this.product[i].id}" class="box-content redir">
+                <h3>${this.product[i].title}</h3>
+                </div>`
+                cible[count].innerHTML = str;
+                count++;
+            }
+        }
+        console.log('__________');
+    }
 }
 
 function redirection() {
@@ -79,3 +103,25 @@ function redirection() {
 
 
 getArticle(key);
+
+
+
+
+
+
+
+
+
+function redirectionCategories(actu) {
+
+    let cible = document.querySelectorAll('nav.main-nav ul li');
+
+
+    cible.forEach((e) => {
+        e.addEventListener("click", () => {
+
+            let content = e.textContent;
+            actu.createHTMLStructCategory(content);
+        });
+    })
+}
