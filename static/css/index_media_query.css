@@ -1,0 +1,21 @@
+
+@media only screen and (min-width: 480px) {
+
+    html {
+        font-size: 80%;
+    }
+
+    .form-links, form[name="form1"] {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (min-width: 960px) {
+
+
+    .form-links, form[name="form1"] {
+        width: 30%;
+    }
+
+}

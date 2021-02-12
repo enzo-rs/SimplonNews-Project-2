@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+}
+
+
+html {
+    font-size: 100%;
+}
+
+.header{ 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.search > i{ 
+    color: #f61717;
+    font-size: 2rem;
+}
+
+.search{ 
+    display: flex; 
+    justify-content: flex-end; 
+    background-color: #f2f2f2;
+    height: 2rem;
+}
+
+.title{ 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+h1{ 
+    color: #f61717;
+    font-size: 6rem;
+    padding: 15px;
+}
+
+.neon{
+    color: #f61717;
+    text-shadow: 
+      0 0 0.033em #fff, 
+      0 0 0.08em #fff,
+      0 0 0.1em #f61717, 
+      0 0 0.2em #f61717, 
+      0 0 0.3em #f61717, 
+      0 0 1em #f61717,
+      0 0 1.5em #b60a0a;
+  }
+  
+  .neon span{
+    animation-name: flicker;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .neon span:nth-child(2n){
+    animation-delay: 3s;
+  }
+  
+  @keyframes flicker {
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    72%,
+    100% {
+      opacity: 1;
+    }
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    71.999% {
+      opacity: 0.33;
+    }
+  }
+ 
+
+h2{
+    padding-bottom: 100px;
+}
+
+.main-nav{ 
+    background-color: #f61717; 
+    color: white; 
+    width: 86%;
+    margin: auto;
+    height: 30px; 
+
+}
+
+nav.main-nav ul{ 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around; 
+    list-style: none;
+    padding: 5px;
+}
+
+
+.footer{ 
+    background-color: #f2f2f2;
+}
+
+.logo{
+    position: absolute;
+    left: -999em;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around; 
+    list-style: none;
+    width: 70%;
+    margin: auto;
+    padding: 200px 0 100px 0;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #f61717;
+}
+
+hr{
+    width: 50%;
+    margin: auto;
+    color: #f61717;
+}
+
+.links ul{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    list-style: none;
+    gap: 20px;
+    padding: 100px 0 100px 0;
+}
+
+.links .fab{
+    font-size: 2rem;
+    color: #f61717;
+}
+
+.links .fab:hover{
+    color: black;
+}
+
+
+.copyrights{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width : 414px){
+    h1{ 
+        text-align: center;
+        padding: 15px;
+    }
+
+    .main-nav{
+        width: 100%;
+    }
+
+    .bicPic img{
+        display: none;
+        
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box2{
+        border: #b60a0a;
+    }
+        
+    .box7{
+        display: none;
+    }
+
+    .logo{
+        position: absolute;
+        left: 150px;
+        padding-top: 100px;
+    }
+
+    
+    .logo2{
+        display: none;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .menu ul li{
+        padding-bottom: 10px;
+    }
+    
+
+    hr{
+        width: 70%;
+    }
+
+    .links ul{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 70px;
+    }
+
+}

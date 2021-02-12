@@ -1,0 +1,14 @@
+Une base projet sur la branch principal 'main'
+Chaque développeur de l'equipe crée une nouvelle branch par fonctionnalitée :
+    dans sa branch on add commit push normalement (on est sensé etre seul !)
+Quand j'ai finis la fonctionnalitée liée a ma branch : 
+    sur github je crée une pull request de ma branch vers main.
+    si pas de conflict : 
+        on merge no soucis puis, on checkout sur la branch main et on pull pour se mettre a jour avant de creer une nouvelle branch
+    si il y a conflict : 
+        on checkout sur main, on pull pour récuperer les modifications, checkout sur votre branch puis :
+            on rebase (git rebase main),
+            si rebase pas de conflict : verifier le code, git add commit push --force
+            si rebase a un conflict, pour chaque conflict : 
+                on gere le conflict puis on add le fichier dans lequel il y avait le conflict,
+                git rebase --continue 
