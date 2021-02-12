@@ -55,7 +55,6 @@ class ArticlesObjet {
         for (let i = 0; i < cible.length; i++) {
             str = `<div data-key ="${this.product[i].id}" class="box-content redir">
             <h3>${this.product[i].title}</h3>
-            <p>${this.product[i].resume}</p>
             </div>`
             cible[i].innerHTML = str;
 
