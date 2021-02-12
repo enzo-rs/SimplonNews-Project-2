@@ -95,6 +95,7 @@ function createUser(emailValue, passwordValue, firstName, lastName) {
                         console.log(data);
                     } else {
                         console.log('success');
+                        setTimeout(() => {document.location.href = "static/views/login.html"}, 3000)
                         console.log(data);
                     }
 
@@ -145,6 +146,6 @@ formElement.addEventListener('submit', (e) => {
 /* Login redirection start*/
 
 
-changePage('static/views/login.html')
+changePage('static/views/login.html');
 
 /* Login redirection end*/

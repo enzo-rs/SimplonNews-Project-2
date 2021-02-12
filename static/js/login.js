@@ -28,12 +28,14 @@ function accessUser(email, password) {
         .then(function (response) {
 
             if (response.status == 400) {
-                alertBox(`Email ou mot de passe incorrect.`);
+                response.json()
+                .then(function(data) {
+                    alertBox(data.error)
+                })
             } else
                 response.json()
                 .then(function (data) {
                     let token = data.token;
-
                     sessionStorage.setItem('token', token);
                     document.location.href = '../views/home.html'
 

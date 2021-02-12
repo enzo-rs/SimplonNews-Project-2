@@ -14,16 +14,30 @@ function getArticle(key) {
 
     fetch('https://simplonews.brianboudrioux.fr/articles', config)
         .then(function (response) {
-            response.json()
-                .then(function (articles) {
-                    console.log(articles.articles);
-                    let news = articles.articles;
-                    let actu = new ArticlesObjet(news);
-                    actu.createHTMLStruct();
-                })
-                .catch(function (error) {
-                    console.log(error);
-                })
+
+            if (response.status == 403) {
+                response.json()
+                    .then(function (error) {
+                        sessionStorage.removeItem('token')
+                    })
+            } else if (response.status == 400) {
+                response.json()
+                    .then(function (error) {
+                        alertBox(error.error)
+                    })
+            } else {
+                response.json()
+                    .then(function (articles) {
+                        console.log(articles.articles);
+                        let news = articles.articles;
+                        let actu = new ArticlesObjet(news);
+                        actu.createHTMLStruct();
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    })
+            }
+
         })
         .catch(function (error) {
             console.log(error);
