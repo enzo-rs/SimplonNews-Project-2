@@ -56,9 +56,9 @@ class ArticlesObjet {
         <div class="img-container">
         <img class="img-article" src="${this.product.img}" alt="">
         </div>
+
+            <div class="title-container"><h2>${this.product.title}</h2></div>
             <div>
-            
-            <h2>${this.product.title}</h2>
             <h4>${this.product.resume}</h4>
             <p>${this.product.content}</p>
             </div>`
