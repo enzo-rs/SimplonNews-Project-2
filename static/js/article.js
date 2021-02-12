@@ -52,7 +52,10 @@ class ArticlesObjet {
         let cible = document.querySelector('article.content');
         let str = "";
 
-        str = `<img class="img-article" src="${this.product.img}" alt="">
+        str = `
+        <div class="img-container">
+        <img class="img-article" src="${this.product.img}" alt="">
+        </div>
             <div>
             
             <h2>${this.product.title}</h2>
