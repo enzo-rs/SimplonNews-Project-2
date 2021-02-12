@@ -124,11 +124,12 @@ formElement.addEventListener('submit', (e) => {
 
     createUser(emailValue, passwordValue, firstNameValue, lastNameValue);
 
+    let valid = validateForm([emailInput, passwordInput, firstNameInput, lastNameInput])
     if (!validateEmail()) {
         alertBox('Veuillez entrer une adresse mail valide');
     } else if (!validatePasswordLength()) {
         alertBox('Votre mot de passe doit contenir au moins 8 caractères')
-    } else if (validateForm() && validateEmail()) {
+    } else if ( valid && validateEmail()) {
         emailInput.value     = "";
         passwordInput.value  = "";
         firstNameInput.value = "";
