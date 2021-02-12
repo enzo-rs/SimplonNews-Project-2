@@ -53,15 +53,24 @@ class ArticlesObjet {
         let str = "";
 
         str = `
-        <div class="img-container">
-        <img class="img-article" src="${this.product.img}" alt="">
-        </div>
+        
 
-            <div class="title-container"><h2>${this.product.title}</h2></div>
-            <div>
-            <h4>${this.product.resume}</h4>
-            <p>${this.product.content}</p>
-            </div>`
+            <div class="title-container">
+                <h2>${this.product.title}</h2>
+                <h4>${this.product.resume}</h4>
+            </div>
+
+            <div class="content-container">
+                <div class="img-container">
+                    <img class="img-article" src="${this.product.img}" alt="">
+                </div>
+                <div class='text-container'>
+                    <p>${this.product.content}</p>
+                </div>
+            </div>
+            `
+            
+
 
 
 
