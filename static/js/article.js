@@ -54,10 +54,7 @@ class ArticlesObjet {
 
         str = `<img class="img-article" src="${this.product.img}" alt="">
             <div>
-            <div class="button-div">
-                <button class="button"type="button"><a href="#"></a>
-                    Free Trial</button>
-            </div>
+            
             <h2>${this.product.title}</h2>
             <h4>${this.product.resume}</h4>
             <p>${this.product.content}</p>
