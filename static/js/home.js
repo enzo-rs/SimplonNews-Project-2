@@ -83,6 +83,7 @@ class ArticlesObjet {
                 count++;
             }
         }
+        redirection();
         console.log('__________');
     }
 }

@@ -95,7 +95,6 @@ function createUser(emailValue, passwordValue, firstName, lastName) {
                         console.log(data);
                     } else {
                         console.log('success');
-                        setTimeout(() => {document.location.href = "static/views/login.html"}, 3000)
                         console.log(data);
                     }
 
@@ -136,6 +135,7 @@ formElement.addEventListener('submit', (e) => {
         firstNameInput.value = "";
         lastNameInput.value  = "";
         document.querySelector('.errors-container').textContent = '';
+        setTimeout(() => {document.location.href = "static/views/login.html"}, 3000)
     }
 })
 

@@ -7,6 +7,10 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+  --red: #ce0033;
+}
+
 main > img {
   position: absolute;
   top: 0;
@@ -84,7 +88,7 @@ input[type="submit"] {
   padding: 2% 3%;
   margin-top: 5%;
   border-radius: 5px;
-  background-color: #f61717;
+  background-color: var(--red);
   color: white;
   border: none;
   font-size: 1.5rem;
@@ -118,6 +122,6 @@ div.errors {
 
 a.active {
   color: #fff;
-  background-color: #f61717;
+  background-color: var(--red);
   background-image: none;
 }
