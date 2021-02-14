@@ -16,11 +16,17 @@
     row-gap: 15px;
 }
 
+img{
+    border-radius: 5px;
+
+}
+
 
 .box1{ 
     grid-column: 2/3; 
     grid-row: 1/2; 
     width: 20;
+
 }
 
 .box2{ 
@@ -28,12 +34,20 @@
     grid-row: 1/2; 
     width: 195px; 
     height: 187px; 
-    background-color: #f61717; 
+    background-color:#ce0033; 
     color: white;
     display: flex;
     align-items: center;
     text-align: center;
-     
+    border-radius: 5px;
+    
+}
+
+.box2:hover{
+    font-size: larger;
+    font-weight: bolder;
+    padding-bottom: 5px;
+
 }
 
 
@@ -42,11 +56,19 @@
     grid-row: 1/2; 
     width: 195px; 
     height: 187px; 
-    background-color: #f61717; 
+    background-color: #ce0033; 
     color: white;
     display: flex;
     align-items: center;
     text-align: center;
+    border-radius: 5px;
+}
+
+.box3:hover{
+    font-size: larger;
+    font-weight: bolder;
+    padding-bottom: 5px;
+
 }
 
 .box4{ 
@@ -59,6 +81,14 @@
     display: flex;
     align-items: center;
     text-align: center;
+    border-radius: 5px;
+}
+
+.box4:hover{
+    font-size: larger;
+    font-weight: bolder;
+    padding-bottom: 5px;
+
 }
 
 .box5{ 
@@ -71,11 +101,19 @@
     grid-row: 2/3; 
     width: 195px; 
     height: 187px; 
-    background-color: #f61717; 
+    background-color:#ce0033; 
     color: white;
     display: flex;
     align-items: center;
     text-align: center;
+    border-radius: 5px;
+}
+
+.box6:hover{
+    font-size: larger;
+    font-weight: bolder;
+    padding-bottom: 5px;
+
 }
 
 .box7{ 
@@ -93,12 +131,20 @@
     display: flex;
     align-items: center;
     text-align: center;
+    border-radius: 5px;
+}
+
+.box8:hover{
+    font-size: larger;
+    font-weight: bolder;
+    padding-bottom: 5px;
 }
 
 .box-content{ 
     display: flex; 
     flex-direction: column; 
     align-items: center;
+    padding: 10px;
 }
 
 .box2 h3{ 
@@ -117,18 +163,18 @@
     list-style: none;
     width: 70%;
     margin: auto;
-    padding: 200px 0 100px 0;
+    padding: 100px 0 100px 0;
 }
 
 .menu a{
     text-decoration: none;
-    color: #f61717;
+    color:#ce0033;
 }
 
 hr{
     width: 50%;
     margin: auto;
-    color: #f61717;
+    color: #ce0033;
 }
 
 .links ul{
@@ -142,7 +188,7 @@ hr{
 
 .links .fab{
     font-size: 2rem;
-    color: #f61717;
+    color:#ce0033;
 }
 
 .links .fab:hover{
@@ -187,25 +233,6 @@ hr{
 
     }
 
-    .logo{
-        margin: auto;
-        display: flex;
-        justify-content: center;
-    }
 
-    
-    .logo2{
-        display: none;
-    }
-    
-
-    hr{
-        width: 70%;
-    }
-
-    .links ul{
-        flex-direction: column;
-        align-items: center;
-    }
 
 }

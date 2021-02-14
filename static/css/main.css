@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
-
 *{ 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
     font-family: 'Roboto', sans-serif;
 }
-
 
 html {
     font-size: 100%;
@@ -20,7 +18,7 @@ html {
 }
 
 .search > i{ 
-    color: #f61717;
+    color: #ce0033;
     font-size: 2rem;
 }
 
@@ -38,21 +36,21 @@ html {
 }
 
 h1{ 
-    color: #f61717;
+    color: #ce0033;
     font-size: 6rem;
     padding: 15px;
 }
 
 .neon{
-    color: #f61717;
+    color: #ce0033;
     text-shadow: 
       0 0 0.033em #fff, 
       0 0 0.08em #fff,
-      0 0 0.1em #f61717, 
-      0 0 0.2em #f61717, 
-      0 0 0.3em #f61717, 
-      0 0 1em #f61717,
-      0 0 1.5em #b60a0a;
+      0 0 0.1em #ce0033, 
+      0 0 0.2em #ce0033, 
+      0 0 0.3em #ce0033, 
+      0 0 1em #ce0033,
+      0 0 1.5em#ce0033;
   }
   
   .neon span{
@@ -93,20 +91,27 @@ h2{
 }
 
 .main-nav{ 
-    background-color: #f61717; 
+    background-color: #ce0033; 
     color: white; 
-    width: 86%;
+    width: 86.2%;
     margin: auto;
     height: 30px; 
-
+    border-radius: 5px;
+    cursor: pointer; 
 }
 
-nav.main-nav ul{ 
+nav.main-nav ul
+{ 
     display: flex; 
     flex-direction: row; 
     justify-content: space-around; 
     list-style: none;
     padding: 5px;
+}
+
+nav.main-nav ul li:hover{
+    text-decoration: underline white;
+    font-size: larger;
 }
 
 
@@ -115,8 +120,7 @@ nav.main-nav ul{
 }
 
 .logo{
-    position: absolute;
-    left: -999em;
+   display: none;
 }
 
 .menu ul{
@@ -126,18 +130,23 @@ nav.main-nav ul{
     list-style: none;
     width: 70%;
     margin: auto;
-    padding: 200px 0 100px 0;
+    padding: 100px 0 100px 0;
 }
 
 .menu a{
     text-decoration: none;
-    color: #f61717;
+    color: #ce0033;
+}
+
+.menu a:hover{
+    text-decoration: underline #ce0033;
+    font-size: larger;
 }
 
 hr{
     width: 50%;
     margin: auto;
-    color: #f61717;
+    color: #ce0033;
 }
 
 .links ul{
@@ -147,21 +156,32 @@ hr{
     list-style: none;
     gap: 20px;
     padding: 100px 0 100px 0;
+
+}
+
+.logo2{
+    width: 60px;
+    height: 60px;
+}
+
+.logo2 img{
+    color:#ce0033;
 }
 
 .links .fab{
     font-size: 2rem;
-    color: #f61717;
+    color: #ce0033;
 }
 
 .links .fab:hover{
-    color: black;
+    font-size: 3em;
+    color: #ce0033;
 }
-
 
 .copyrights{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 
@@ -175,6 +195,11 @@ hr{
         width: 100%;
     }
 
+    nav.main-nav ul li:hover{
+        text-decoration: underline white;
+        font-size: medium;
+    }
+
     .bicPic img{
         display: none;
         
@@ -185,21 +210,20 @@ hr{
         flex-direction: column;
     }
 
-    .box2{
-        border: #b60a0a;
-    }
-        
+ 
     .box7{
         display: none;
     }
 
     .logo{
-        position: absolute;
-        left: 150px;
+        display: flex;
+        align-items: center;
+        margin: auto;
         padding-top: 100px;
+        width: 70px;
+        height: 70px;   
     }
-
-    
+ 
     .logo2{
         display: none;
     }
@@ -207,22 +231,24 @@ hr{
     .menu ul{
         flex-direction: column;
         align-items: center;
-        padding-bottom: 50px;
-    }
+        padding: 50px 0 50px 0;    }
 
     .menu ul li{
         padding-bottom: 10px;
     }
-    
 
+    .menu a:hover{
+        text-decoration: underline #ce0033;
+        font-size: medium;
+    }
+    
     hr{
         width: 70%;
     }
 
     .links ul{
-        flex-direction: column;
         align-items: center;
-        padding-top: 70px;
+        padding-top: 60px;
     }
 
 }

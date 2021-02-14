@@ -1,80 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
-    body{
-    background-color: rgb(209, 195, 192)
-    }
-    header{
+.content{
+    padding: 0 100px 0 100px;
+    background-color: #F2F2F2;
+}
+
+.title-container{
     display: flex;
     justify-content: center;
-    }
-    .for-head{
-    color: red;
-    display: inline;
-    text-align: -webkit-center;
-}
-.for-head>h3{
-    color: black;
-    }
-.img-article{
-width: 54%;
-        
-}
-    
-.content{
-    
-    display: flex;
-    margin-bottom: 10px;
-}
-div{
-    background-color: #ffffff;
-    display: flex;
     flex-direction: column;
-    padding: 3%;
+
 }
-.button{
-        width: 20%;
-        height: 33px;
-        padding: 0 20px;
-        font-size: 1rem;
-        text-align: center;
-        color: #fff;
-        text-shadow: 1px 1px 1px #000;
-        border-radius: 10px;
-        background-color: rgba(220, 0, 0, 1);
-    }
+
+.content h2{
+    color: #ce0033;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+.content-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-article{
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid #f2f2f2;
+    box-shadow: 0px 0px 0px 2px #ce0033;
+}
+
+p{
+    padding-left: 20px;
+}
+
+
+h4{
+    font-size: large;
+    margin-bottom: 30px;
+}
+
+
 .button-div{
     display: flex;
     flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 414px) {
-    body{
-        background-color: cyan;
-    }
-    .search > i{ 
-        font-size: 2rem;        
-    }
     
-    
-    .main-nav{
-        width: 100%;
-    }
-     .main-nav ul{
-        flex-direction: column;
-        align-items: center;
-    }
     .img-article{
         width: 100%;
-        
     }
-    div{
-        order: 1;
-        justify-content: end;
+
+
+    .title-container{
+        padding: 0 10px 0 10px;
+        background-color: #F2F2F2;
     }
-    .button{
-        order: 3;
-        padding: 0%;
-        font-size: 74%;
+
+    .content-container{
+        display: flex;
+        flex-direction: column;
+        background-color: #F2F2F2;
+        padding: 0 10px 0 10px;
+
     }
+
+    .img-container{
+        padding: 2px;
+        border-radius: 5px;
+    }
+    
+   
+
+    .text-container{
+        padding-top: 20px;
+    }
+    
+
     article.content{
         display: contents;
     }
